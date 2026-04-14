@@ -3,10 +3,10 @@
 
 :root {
   --primary: linear-gradient(135deg, #f8c7cc 0%, #e8b4c1 50%, #d4a5b0 100%);
-  --secondary: linear-gradient(135deg, #10100f 0%, #151515 50%, #171616 100%);
+  --secondary: linear-gradient(135deg, #f4e4bc 0%, #f0d9a7 50%, #e6c992 100%);
   --accent: #d4af37;
-  --text-dark: #efe9e6;
-  --text-light: #1b1a1a;
+  --text-dark: #2c1810;
+  --text-light: #f8f5f2;
   --glass: rgba(255, 255, 255, 0.1);
   --glass-dark: rgba(255, 255, 255, 0.05);
   --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -96,7 +96,7 @@ nav a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 4px 20px rgba(248, 242, 242, 0.1);
+  text-shadow: 0 4px 20px rgba(243, 236, 236, 0.1);
 }
 
 .couple-subtitle {
