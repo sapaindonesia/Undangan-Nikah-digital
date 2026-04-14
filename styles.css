@@ -3,7 +3,7 @@
 
 :root {
   --primary: linear-gradient(135deg, #f8c7cc 0%, #e8b4c1 50%, #d4a5b0 100%);
-  --secondary: linear-gradient(135deg, #f4e4bc 0%, #f0d9a7 50%, #e6c992 100%);
+  --secondary: linear-gradient(135deg, #e1e1df 0%, #090909 50%, #e6c992 100%);
   --accent: #d4af37;
   --text-dark: #2c1810;
   --text-light: #f8f5f2;
