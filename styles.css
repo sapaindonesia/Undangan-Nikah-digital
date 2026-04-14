@@ -1,0 +1,396 @@
+/* Professional Wedding Invitation - Romantic Glassmorphism */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary: linear-gradient(135deg, #f8c7cc 0%, #e8b4c1 50%, #d4a5b0 100%);
+  --secondary: linear-gradient(135deg, #f4e4bc 0%, #f0d9a7 50%, #e6c992 100%);
+  --accent: #d4af37;
+  --text-dark: #2c1810;
+  --text-light: #f8f5f2;
+  --glass: rgba(255, 255, 255, 0.1);
+  --glass-dark: rgba(255, 255, 255, 0.05);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --border: rgba(255, 255, 255, 0.2);
+  --radius: 24px;
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  color: var(--text-dark);
+  overflow-x: hidden;
+  background: var(--primary);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: var(--transition);
+  position: relative;
+}
+
+nav a:hover {
+  background: var(--glass-dark);
+  transform: translateY(-2px);
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 2rem 4rem;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.4) 0%, transparent 50%),
+    var(--primary);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: var(--secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.couple-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-dark);
+  opacity: 0.9;
+}
+
+.countdown {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.countdown-item {
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  min-width: 120px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.countdown-item:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.countdown-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  display: block;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  background: var(--secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card {
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s;
+}
+
+.card:hover::before {
+  left: 100%;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.person-card {
+  text-align: center;
+}
+
+.person-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 5px solid var(--accent);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.person-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.person-title {
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.parents {
+  font-style: italic;
+  color: var(--text-dark);
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--secondary);
+  color: var(--text-dark);
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(244, 228, 188, 0.4);
+}
+
+.cta-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(244, 228, 188, 0.6);
+}
+
+footer {
+  background: var(--glass-dark);
+  backdrop-filter: blur(20px);
+  text-align: center;
+  padding: 3rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.music-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.music-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Particles Canvas */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container { padding: 0 1rem; }
+  header { padding: 0.5rem 0; }
+  nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+  nav a { 
+    margin: 0 0.5rem;
+    padding: 0.75rem 1rem;
+    min-width: 80px;
+    text-align: center;
+  }
+  .hero { padding: 100px 1rem 2rem; min-height: 100vh; }
+  .hero h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .countdown { gap: 0.5rem; }
+  .countdown-item { 
+    min-width: 70px; 
+    padding: 1rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  .countdown-number { font-size: 2rem; }
+  .section { padding: 4rem 0; }
+  .section-title { font-size: 2rem; }
+  .card { padding: 2rem 1.5rem; margin-bottom: 1.5rem; }
+  .profile-grid, .grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .cta-button { 
+    padding: 1rem 2rem; 
+    font-size: 1rem; 
+    min-height: 50px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .person-photo { width: 150px; height: 150px; }
+  input, select, textarea, button {
+    min-height: 50px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  .music-toggle { width: 55px; height: 55px; bottom: 1rem; right: 1rem; }
+  
+  /* Hamburger for very small screens */
+  @media (max-width: 480px) {
+    nav {
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      scrollbar-width: none;
+    }
+    nav::-webkit-scrollbar { display: none; }
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Loading */
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  transition: opacity 0.5s;
+}
+
+.loading.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 4px solid var(--glass);
+  border-top: 4px solid var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

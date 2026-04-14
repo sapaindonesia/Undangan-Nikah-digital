@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Profil - Undangan Abdul Halim & Lisa Maulidina</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html#home">Beranda</a>
+            <a href="index.html#ceremony">Akad</a>
+            <a href="index.html#reception">Resepsi</a>
+            <a href="#profile">Profil</a>
+            <a href="index.html#rsvp">RSVP</a>
+            <a href="index.html#gallery">Galeri</a>
+        </nav>
+    </header>
+
+    <!-- Hero Profile -->
+    <section class="hero" style="padding: 120px 2rem 4rem; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 4rem; margin-bottom: 2rem;">Data Diri Calon Pengantin</h1>
+            <p style="font-size: 1.3rem; opacity: 0.9;">Mengenal Lebih Dekat Calon Mempelai</p>
+        </div>
+    </section>
+
+    <!-- Profile Grid -->
+    <section id="profile" class="section">
+        <div class="container">
+            <div class="profile-grid">
+                <!-- Pengantin Pria -->
+                <div class="card fade-in">
+                    <div class="person-card">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=250&h=250&fit=crop&crop=face&border-radius=50%" alt="Abdul Halim" class="person-photo">
+                        <h2 class="person-name">Abdul Halim</h2>
+                        <p class="person-title">S.Tr</p>
+                        <div class="parents">
+                            <p><strong>Putra dari:</strong></p>
+                            <p><i class="fas fa-user-tie"></i> Bapak Muhadjir Efenddy, S.H, M.Hum</p>
+                            <p><i class="fas fa-user"></i> Ibu Rita Aulia, S.Pd</p>
+                        </div>
+                        <div style="margin-top: 2rem; text-align: left;">
+                            <h4><i class="fas fa-heart"></i> Sekilas Tentang Abdul</h4>
+                            <p>Seorang pemuda yang berdedikasi, bertanggung jawab, dan penuh kasih sayang. Siap membangun rumah tangga yang sakinah, mawaddah, warahmah.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pengantin Wanita -->
+                <div class="card fade-in" style="animation-delay: 0.3s;">
+                    <div class="person-card">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=250&h=250&fit=crop&crop=face&border-radius=50%" alt="Lisa Maulidina" class="person-photo">
+                        <h2 class="person-name">Lisa Maulidina</h2>
+                        <p class="person-title">S.M</p>
+                        <div class="parents">
+                            <p><strong>Putri dari:</strong></p>
+                            <p><i class="fas fa-user-tie"></i> Bapak Ali Rifai, S.Tr.K</p>
+                            <p><i class="fas fa-user"></i> Ibu Rina Alma, S.H, M.H</p>
+                        </div>
+                        <div style="margin-top: 2rem; text-align: left;">
+                            <h4><i class="fas fa-heart"></i> Sekilas Tentang Lisa</h4>
+                            <p>Wanita yang lembut, penyayang, dan berakhlak mulia. Siap menjadi pendamping hidup yang setia dan penuh cinta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="card fade-in" style="margin-top: 4rem; text-align: center;">
+                <h3 style="font-size: 2.5rem; margin-bottom: 2rem;"><i class="fas fa-clock"></i> Perjalanan Cinta</h3>
+                <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem;">
+                    <div>
+                        <div style="font-size: 3rem; color: var(--accent);">2023</div>
+                        <p>Bertemu pertama kali</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-heart" style="font-size: 4rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                    </div>
+                    <div>
+                        <div style="font-size: 3rem; color: var(--accent);">2024</div>
+                        <p>Menikah selamanya 💍</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kembali ke Beranda -->
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="index.html" class="cta-button">
+                    <i class="fas fa-home"></i> Kembali ke Undangan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Undangan Digital Abdul & Lisa</p>
+        </div>
+    </footer>
+
+    <!-- Music Auto Play -->
+    <button id="musicToggle" class="music-toggle" title="Pause Music" style="display: none;">
+        <i class="fas fa-pause"></i>
+    </button>
+    <audio id="weddingMusic" loop preload="auto">
+        <source src="Denny Caknan Feat Bella Bonita - SINARENGAN ( Official Video ).mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
